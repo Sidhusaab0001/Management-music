@@ -132,15 +132,11 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption=f"""
-**Wᴇʟᴄᴏᴍᴇ Tᴏ {member.chat.title}
-➖➖➖➖➖➖➖➖➖➖➖➖
-Nᴀᴍᴇ ✧ {user.mention}
+**Nᴀᴍᴇ ✧ {user.mention}
 Iᴅ ✧ {user.id}
-Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
-➖➖➖➖➖➖➖➖➖➖➖➖**
+Usᴇʀɴᴀᴍᴇ ✧ @{user.username}**
 """,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/YumikooBot?startgroup=true")]])
-        )
+            
     except Exception as e:
         LOGGER.error(e)
     try:
@@ -156,10 +152,7 @@ async def bot_wel(_, message):
     for u in message.new_chat_members:
         if u.id == app.me.id:
             await app.send_message(LOG_CHANNEL_ID, f"""
-**NEW GROUP
-➖➖➖➖➖➖➖➖➖➖➖➖
-NAME: {message.chat.title}
+**NAME: {message.chat.title}
 ID: {message.chat.id}
-USERNAME: @{message.chat.username}
-➖➖➖➖➖➖➖➖➖➖➖➖**
+USERNAME: @{message.chat.username}**
 """)
