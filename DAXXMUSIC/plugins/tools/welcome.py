@@ -135,7 +135,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 **Nᴀᴍᴇ ✧ {user.mention}
 Iᴅ ✧ {user.id}
 Usᴇʀɴᴀᴍᴇ ✧ @{user.username}**
-""",
+""",)
             
     except Exception as e:
         LOGGER.error(e)
