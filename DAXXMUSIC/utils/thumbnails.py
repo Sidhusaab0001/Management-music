@@ -88,7 +88,7 @@ async def get_thumb(videoid):
         y2 = Ycenter + 250
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.ANTIALIAS)
-        logo = ImageOps.expand(logo, border=17, fill="pink")
+        logo = ImageOps.expand(logo, border=17, fill="black")
         background.paste(logo, (50, 100))
         draw = ImageDraw.Draw(background)
         
@@ -103,14 +103,14 @@ async def get_thumb(videoid):
         para = textwrap.wrap(clear(title), width=32) 
         j = 0
         draw.text(
-            (6, 6), f"{BOT_NAME}", fill="Yellow", font=name_font
+            (6, 6), f"{BOT_NAM}", fill="blue", font=name_font
         )
         draw.text(
             (600, 200),
-            f"NOW PLAYING",
-            fill="white",
+            f"BROKEN ♡︎ MUSIC",
+            fill="purple",
             stroke_width=2,
-            stroke_fill="yellow",
+            stroke_fill="white",
             font=font2,
         )
         for line in para:
