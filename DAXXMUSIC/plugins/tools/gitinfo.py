@@ -11,7 +11,7 @@ async def daxxhub(_, message):
     text = message.text[len("/pink") :]
     papadaxx(f"{text}").save(f"pink_{message.from_user.id}.png")
     await message.reply_photo(f"pink_{message.from_user.id}.png")
-    os.remove(f"daxxhub_{message.from_user.id}.png")
+    os.remove(f"pink_{message.from_user.id}.png")
 ####
 
 @app.on_message(filters.command(["github", "git"]))
